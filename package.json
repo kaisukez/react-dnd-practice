@@ -1,9 +1,11 @@
 {
-  "name": "react-dnd",
+  "name": "react-dnd-practice",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
+    "react-dnd": "^9.0.1",
+    "react-dnd-html5-backend": "^9.0.0",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },

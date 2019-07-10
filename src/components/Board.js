@@ -1,4 +1,6 @@
 import React from 'react'
+import { DndProvider } from 'react-dnd'
+import HTML5Backend from 'react-dnd-html5-backend'
 
 import { renderSquare } from './Square'
 
@@ -9,15 +11,17 @@ export default function Board(props) {
         square.push(renderSquare(i, knightPosition))
     }
     return (
-        <div
-            style={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                flexWrap: 'wrap'
-            }}
-        >
-            {square}
-        </div>
+        <DndProvider backend={HTML5Backend}>
+            <div
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                }}
+            >
+                {square}
+            </div>
+        </DndProvider>
     )
 }
